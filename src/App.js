@@ -11,17 +11,21 @@ function App() {
   const [prevState, setPrevState] = useState("");
 
   function doCulc() {
-    if (eval(str)) {
-      setPrevState(str);
-      setStr(eval(str));
-    }
+    setPrevState(str);
+    setStr("" + eval(str));
   }
 
   function handleClick(value) {
-    if (value === "=") {
-      doCulc();
-    } else {
-      setStr((prevValue) => prevValue + value);
+    switch (value) {
+      case "=":
+        doCulc();
+        break;
+      case "del":
+        setStr((prevValue) => prevValue.slice(0, -1));
+        break;
+      default:
+        setStr((prevValue) => prevValue + value);
+        break;
     }
   }
 
