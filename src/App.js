@@ -48,7 +48,6 @@ function App() {
         >
           <TextField
             style={{ width: "100%", marginBottom: 15 }}
-            required
             label={prevState}
             onChange={(e) => setStr(e.target.value)}
             value={str}
