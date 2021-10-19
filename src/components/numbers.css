@@ -1,0 +1,13 @@
+#numbersWrapper {
+  width: 200px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#numbersWrapper Button {
+  font-size: 1.5rem;
+}

@@ -1,0 +1,14 @@
+#operatorsWrap {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4px;
+}
+
+#operatorsWrap Button {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+#operatorsWrap Button:last-child {
+  margin-bottom: 0;
+}
