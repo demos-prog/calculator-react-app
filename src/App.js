@@ -11,8 +11,12 @@ function App() {
   const [prevState, setPrevState] = useState("");
 
   function doCulc() {
-    setPrevState(str);
-    setStr("" + eval(str));
+    if (/[a-zA-Zа-яА-Я!#№@$:;%^?"`']/g.test(str)) {
+      alert("Incorrect input!");
+    } else {
+      setPrevState(str);
+      setStr("" + eval(str));
+    }
   }
 
   function handleClick(value) {
