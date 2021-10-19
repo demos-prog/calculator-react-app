@@ -4,15 +4,17 @@ import { TextField } from "@mui/material";
 import Numbers from "./components/numbers";
 import Operators from "./components/operators";
 import "./App.css";
+/* eslint no-eval: 0 */
 
 function App() {
   const [str, setStr] = useState("");
   const [prevState, setPrevState] = useState("");
 
   function doCulc() {
-    console.log(str);
-    setPrevState(str);
-    setStr("");
+    if (eval(str)) {
+      setPrevState(str);
+      setStr(eval(str));
+    }
   }
 
   function handleClick(value) {
@@ -33,7 +35,7 @@ function App() {
           }}
         >
           <TextField
-            style={{ width: "100%", marginBottom: 15, fontSize: 30 }}
+            style={{ width: "100%", marginBottom: 15 }}
             required
             label={prevState}
             onChange={(e) => setStr(e.target.value)}
