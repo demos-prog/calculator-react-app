@@ -6,7 +6,7 @@ export default function Numbers({ handleClick }) {
   for (let i = 1; i < 10; i++) {
     arr.push(
       <Grid className="btn" key={i} item xs={4}>
-        <Button onClick={() => handleClick(i)} variant="outlined">
+        <Button onClick={() => handleClick("" + i)} variant="outlined">
           {i}
         </Button>
       </Grid>
