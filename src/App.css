@@ -1,8 +1,8 @@
-#root{
+#root {
   height: 100%;
 }
 
-#wrap{
+#wrap {
   width: 100%;
   height: 100%;
   display: flex;
@@ -10,12 +10,12 @@
   align-items: center;
 }
 
-#app{
-  border: 1px solid #8CBAE8;
+#app {
+  border: 1px solid #8cbae8;
   padding: 15px;
   border-radius: 15px;
 }
 
-#btns{
+#btns {
   display: flex;
 }
