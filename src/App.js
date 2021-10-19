@@ -11,7 +11,11 @@ function App() {
   const [prevState, setPrevState] = useState("");
 
   function doCulc() {
-    if (/[a-zA-Zа-яА-Я!#№@$:;%^?"`']/g.test(str)) {
+    if (
+      /[a-zA-Zа-яА-Я!#№@$:;%^?"`']/g.test(str) ||
+      isNaN(+str[0]) ||
+      isNaN(+str[str.length - 1])
+    ) {
       alert("Incorrect input!");
     } else {
       setPrevState(str);
