@@ -13,7 +13,7 @@ function App() {
   function doCulc() {
     if (
       /[a-zA-Zа-яА-Я!#№@$:;%^?"`']/g.test(str) ||
-      isNaN(+str[0]) ||
+      (isNaN(+str[0]) && (!str[0] === "+" || !str[0] === "-")) ||
       isNaN(+str[str.length - 1])
     ) {
       alert("Incorrect input!");
